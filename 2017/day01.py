@@ -8,3 +8,4 @@ def captcha(s, step):
 if __name__ == '__main__':
     s = read(2017, 1)
     print(captcha(s, 1))
+    print(captcha(s, len(s) // 2))
