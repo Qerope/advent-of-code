@@ -30,3 +30,5 @@ def first_larger(limit):
 
 if __name__ == '__main__':
     print(first_larger(368078))
+
+assert [distance(n) for n in (1, 12, 23, 1024)] == [0, 3, 2, 31]
