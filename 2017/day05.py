@@ -15,3 +15,4 @@ def run(offsets, part2=False):
 if __name__ == '__main__':
     data = [int(x) for x in read(2017, 5).split()]
     print(run(data))
+    print(run(data, True))
