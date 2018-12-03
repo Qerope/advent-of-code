@@ -10,3 +10,7 @@ for _, x, y, w, h in claims:
         for j in range(y, y + h):
             fabric[(i, j)] += 1
 print(sum(v > 1 for v in fabric.values()))
+
+for cid, x, y, w, h in claims:
+    if all(fabric[(i, j)] == 1 for i in range(x, x + w) for j in range(y, y + h)):
+        print(cid)
