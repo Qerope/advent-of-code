@@ -10,3 +10,14 @@ for c, n in cmds:
     else:
         depth -= n
 print(x * depth)
+
+x = depth = aim = 0
+for c, n in cmds:
+    if c == 'forward':
+        x += n
+        depth += aim * n
+    elif c == 'down':
+        aim += n
+    else:
+        aim -= n
+print(x * depth)
