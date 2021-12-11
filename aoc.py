@@ -8,3 +8,8 @@ def read(year, day):
 
 def lines(year, day):
     return read(year, day).splitlines()
+
+
+def ints(text):
+    import re
+    return [int(x) for x in re.findall(r'-?\d+', text)]
