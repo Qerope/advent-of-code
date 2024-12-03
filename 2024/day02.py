@@ -9,3 +9,4 @@ def safe(r):
 
 
 print(sum(safe(r) for r in reports))
+print(sum(safe(r) or any(safe(r[:i] + r[i + 1:]) for i in range(len(r))) for r in reports))
