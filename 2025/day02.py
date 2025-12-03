@@ -10,3 +10,11 @@ def invalid(n):
 
 
 print(sum(n for lo, hi in ranges for n in range(lo, hi + 1) if invalid(n)))
+
+
+def invalid2(n):
+    s = str(n)
+    return any(len(s) % k == 0 and s[:k] * (len(s) // k) == s for k in range(1, len(s) // 2 + 1))
+
+
+print(sum(n for lo, hi in ranges for n in range(lo, hi + 1) if invalid2(n)))
